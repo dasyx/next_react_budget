@@ -7,6 +7,7 @@ const Form = ({ onSubmit, buttonText, title, amountLabel }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit({ description, amount: Number(amount) });
+    console.log(description, amount);
     setDescription("");
     setAmount("");
   };
