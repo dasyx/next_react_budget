@@ -1,9 +1,9 @@
 import Form from "./Form";
 
-const ExpenseForm = ({ onSubmit }) => {
+const ExpenseForm = ({ onAddExpense }) => {
   return (
     <Form
-      onSubmit={onSubmit}
+      onSubmit={onAddExpense} // --> onAddExpense au lieu de onSubmit
       buttonText="Add Expense"
       title="Expenses"
       amountLabel="Amount (negative)"
