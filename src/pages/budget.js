@@ -7,11 +7,11 @@ function Budget() {
   const [incomes, setIncomes] = useState([]);
 
   const addExpense = (expense) => {
-    setExpenses([...expenses, expense]);
+    setExpenses([...expenses, { ...expense, id: expenses.length + 1 }]);
   };
 
   const addIncome = (income) => {
-    setIncomes([...incomes, income]);
+    setIncomes([...incomes, { ...income, id: incomes.length + 1 }]);
   };
 
   const getTotalExpenses = () => {
@@ -71,3 +71,4 @@ function Budget() {
 }
 
 export { Budget };
+
